@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { X, ExternalLink, Star, ShieldCheck, ShoppingBag, ArrowRight } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
 // --- CUSTOM SVG LOGO ICONS FOR WINE TECH ENVIRONMENT ---
 const DotNetIcon = () => (
@@ -34,34 +34,12 @@ interface WineDetailProps {
 }
 
 export default function WineDetail({ project, onClose }: WineDetailProps) {
-    // Mock Functional Business State
-    const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
-    const [quantity, setQuantity] = useState<number>(1);
-
-    const wineData = {
-        price: 89.00,
-        rating: 4.9,
-        reviewCount: 124,
-        stockLeft: 4,
-        profile: { body: "Full", sweetness: "Dry", tannins: "High", acidity: "Medium" },
-        specs: [
-            { label: "Region", value: "Barossa Valley, Australia" },
-            { label: "ABV", value: "14.5%" },
-            { label: "Varietal", value: "100% Cabernet Sauvignon" },
-            { label: "Volume", value: "750ml" }
-        ],
-        pairings: ["Prime Ribeye", "Roasted Lamb", "Dark Chocolate Tart"]
-    };
 
     const techBadges = [
         { name: "ASP.NET Core", icon: <DotNetIcon />, glowClass: "shadow-[0_0_15px_rgba(81,43,212,0.15)] border-[#512BD4]/30 text-white" },
         { name: "React.js", icon: <ReactIcon />, glowClass: "shadow-[0_0_15px_rgba(97,218,251,0.15)] border-[#61DAFB]/30 text-white" },
         { name: "MongoDB", icon: <MongoIcon />, glowClass: "shadow-[0_0_15px_rgba(71,162,72,0.15)] border-[#47A248]/30 text-white" }
     ];
-
-    const handleSocialLogin = (platform: string): void => {
-        console.log(`Redirecting to ${platform} OAuth Module...`);
-    };
 
     return (
         <motion.div
@@ -153,7 +131,6 @@ export default function WineDetail({ project, onClose }: WineDetailProps) {
                 </div>
             </div>
 
-           
         </motion.div>
     );
 }

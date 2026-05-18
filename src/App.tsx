@@ -487,4 +487,6 @@ const FooterContact = ({ icon, label, value }: { icon: any, label: string, value
   </div>
 );
 
+
+
 export default App;

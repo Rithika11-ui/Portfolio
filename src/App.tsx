@@ -271,7 +271,6 @@ const App: React.FC = () => {
               />
             </div>
             <div className="mt-6">
-              <p className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-1">Lead Engineer</p>
               <h3 className="text-white text-3xl font-extrabold">RITHIKA PHE</h3>
               <p className="text-gold font-bold mt-1 tracking-tight">GIC Engineer Y4</p>
             </div>
